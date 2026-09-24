@@ -31,6 +31,6 @@ func SetupRedis() {
 
 func CloseRedis() {
 	if RedisConn != nil {
-		RedisConn.Close()
+		RedisConn.Close() // #nosec G104 -- cleanup/best-effort call; error not actionable
 	}
 }
